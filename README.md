@@ -29,3 +29,26 @@ python -m venv venv
 ```powershell
 python "Simulador de Pedidos de Cafeteria.py"
 ```
+
+funcionamiento:
+El mozo inicia sesión con su nombre y una clave simple, para trabajar en su propia sesión. Arma el
+pedido de cada cliente eligiendo productos de un menú organizado por categorías (bebidas, salado,
+dulce), cada uno con su precio. Puede agregar extras a ciertos productos (por ejemplo, leche o
+crema al café), que suman al precio. El sistema calcula el total en vivo e incorpora automáticamente
+una propina del 10%. Al finalizar el pedido, emite el ticket y la venta se suma al total del día.
+El gerente administra el menú: incorpora productos, los organiza por categoría y modifica precios,
+con validaciones para evitar incoherencias. También consulta el cierre del día, que consolida las
+ventas de todos los mozos.
+
+Actores
+Mozo y Gerente.
+
+Clases principales (5)
+Producto (abstracta) y sus tipos · Extra (decorador) · Pedido · Mozo · Cafetería.
+
+Conceptos de POO aplicados
+■ Abstracción y herencia: jerarquía de productos del menú.
+■ Encapsulamiento: precios y clave como atributos privados.
+■ Polimorfismo: cada producto resuelve su precio y descripción.
+■ Patrón de diseño: Decorator para los extras de los productos.
+■ Relación entre objetos: agregación (la Cafetería agrupa Mozos; cada Mozo agrupa sus Pedidos).
